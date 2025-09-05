@@ -116,6 +116,7 @@ def revenue_trend(symbol: str, financials: pd.DataFrame):
     Instruksi :
     - Sumbu X adalah 'date'
     - Sumbu Y adalah 'revenue'
+    - PENTING: simpan plot ke dalam variabel bernama `fig`. contoh: `fig, ax = plt.subplots()`
 
     Tulis HANYA kode python yang bisa langsung dieksekusi. Jangan sertakan penjelasan apapun.
 
@@ -125,7 +126,7 @@ def revenue_trend(symbol: str, financials: pd.DataFrame):
     with st.expander("📊 Visualisasi Tren Pendapatan"):
         exec_locals = {}
         exec(code, {}, exec_locals)
-        #st.pyplot(exec_locals["fig"])
+        st.pyplot(exec_locals["fig"])
 
 
 def trend_analysis(financials: pd.DataFrame):
@@ -180,3 +181,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
